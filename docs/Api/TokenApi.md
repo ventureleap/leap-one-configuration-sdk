@@ -4,68 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTokenPost**](TokenApi.md#gettokenpost) | **POST** /get-token | 
+[**postCredentialsItem**](TokenApi.md#postcredentialsitem) | **POST** /get-token | Get JWT token to login.
 
-# **getTokenPost**
-> \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead getTokenPost($body)
+# **postCredentialsItem**
+> \VentureLeap\ConfigurationService\Model\Token postCredentialsItem($body)
 
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
-
-$apiInstance = new VentureLeap\ConfigurationService\Api\TokenApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite | 
-
-try {
-    $result = $apiInstance->getTokenPost($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TokenApi->getTokenPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite**](../Model/ApplicationJsonldWrite.md)|  | [optional]
-
-### Return type
-
-[**\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead**](../Model/ApplicationJsonldRead.md)
-
-### Authorization
-
-[applicationId](../../README.md#applicationId), [basicAuth](../../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/ld+json, application/json
- - **Accept**: application/ld+json, application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getTokenPost**
-> \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead getTokenPost($body)
-
-
+Get JWT token to login.
 
 ### Example
 ```php
@@ -86,13 +30,13 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\TokenApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \VentureLeap\ConfigurationService\Model\Credentials(); // \VentureLeap\ConfigurationService\Model\Credentials | 
+$body = new \VentureLeap\ConfigurationService\Model\Credentials(); // \VentureLeap\ConfigurationService\Model\Credentials | Create new JWT Token
 
 try {
-    $result = $apiInstance->getTokenPost($body);
+    $result = $apiInstance->postCredentialsItem($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokenApi->getTokenPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokenApi->postCredentialsItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -101,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\VentureLeap\ConfigurationService\Model\Credentials**](../Model/Credentials.md)|  | [optional]
+ **body** | [**\VentureLeap\ConfigurationService\Model\Credentials**](../Model/Credentials.md)| Create new JWT Token | [optional]
 
 ### Return type
 
-[**\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead**](../Model/ApplicationJsonldRead.md)
+[**\VentureLeap\ConfigurationService\Model\Token**](../Model/Token.md)
 
 ### Authorization
 
@@ -113,8 +57,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json, application/json
- - **Accept**: application/ld+json, application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

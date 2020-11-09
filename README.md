@@ -138,29 +138,6 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite | 
-
-try {
-    $result = $apiInstance->getTokenPost($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApplicationApi->getTokenPost: ', $e->getMessage(), PHP_EOL;
-}
-
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
-
-$apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
 $body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite | The new Application resource
 
 try {
@@ -205,7 +182,6 @@ Class | Method | HTTP request | Description
 *ApplicationApi* | [**deleteApplicationItem**](docs/Api/ApplicationApi.md#deleteapplicationitem) | **DELETE** /applications/{id} | Removes the Application resource.
 *ApplicationApi* | [**getApplicationCollection**](docs/Api/ApplicationApi.md#getapplicationcollection) | **GET** /applications | Retrieves the collection of Application resources.
 *ApplicationApi* | [**getApplicationItem**](docs/Api/ApplicationApi.md#getapplicationitem) | **GET** /applications/{id} | Retrieves a Application resource.
-*ApplicationApi* | [**getTokenPost**](docs/Api/ApplicationApi.md#gettokenpost) | **POST** /get-token | 
 *ApplicationApi* | [**postApplicationCollection**](docs/Api/ApplicationApi.md#postapplicationcollection) | **POST** /applications | Creates a Application resource.
 *ApplicationApi* | [**putApplicationItem**](docs/Api/ApplicationApi.md#putapplicationitem) | **PUT** /applications/{id} | Replaces the Application resource.
 *ConfigurationEntryApi* | [**deleteConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /configuration_entries/{id} | Removes the ConfigurationEntry resource.
@@ -213,7 +189,7 @@ Class | Method | HTTP request | Description
 *ConfigurationEntryApi* | [**getConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /configuration_entries/{id} | Retrieves a ConfigurationEntry resource.
 *ConfigurationEntryApi* | [**postConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /configuration_entries | Creates a ConfigurationEntry resource.
 *ConfigurationEntryApi* | [**putConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration_entries/{id} | Replaces the ConfigurationEntry resource.
-*TokenApi* | [**getTokenPost**](docs/Api/TokenApi.md#gettokenpost) | **POST** /get-token | 
+*TokenApi* | [**postCredentialsItem**](docs/Api/TokenApi.md#postcredentialsitem) | **POST** /get-token | Get JWT token to login.
 
 ## Documentation For Models
 
