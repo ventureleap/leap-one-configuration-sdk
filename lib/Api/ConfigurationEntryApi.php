@@ -230,7 +230,7 @@ class ConfigurationEntryApi
             );
         }
 
-        $resourcePath = '/configuration_entries/{id}';
+        $resourcePath = '/configuration/configuration_entries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -505,7 +505,7 @@ class ConfigurationEntryApi
     protected function getConfigurationEntryCollectionRequest($key = null, $value = null, $page = '1')
     {
 
-        $resourcePath = '/configuration_entries';
+        $resourcePath = '/configuration/configuration_entries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -780,7 +780,7 @@ class ConfigurationEntryApi
             );
         }
 
-        $resourcePath = '/configuration_entries/{id}';
+        $resourcePath = '/configuration/configuration_entries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1045,7 +1045,7 @@ class ConfigurationEntryApi
     protected function postConfigurationEntryCollectionRequest($body = null)
     {
 
-        $resourcePath = '/configuration_entries';
+        $resourcePath = '/configuration/configuration_entries';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1316,7 +1316,7 @@ class ConfigurationEntryApi
             );
         }
 
-        $resourcePath = '/configuration_entries/{id}';
+        $resourcePath = '/configuration/configuration_entries/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

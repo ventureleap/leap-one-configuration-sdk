@@ -261,7 +261,7 @@ class TokenApi
     protected function postCredentialsItemRequest($body = null)
     {
 
-        $resourcePath = '/get-token';
+        $resourcePath = '/configuration/get-token';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

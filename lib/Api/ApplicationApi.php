@@ -230,7 +230,7 @@ class ApplicationApi
             );
         }
 
-        $resourcePath = '/applications/{id}';
+        $resourcePath = '/configuration/applications/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -495,7 +495,7 @@ class ApplicationApi
     protected function getApplicationCollectionRequest($page = '1')
     {
 
-        $resourcePath = '/applications';
+        $resourcePath = '/configuration/applications';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -762,7 +762,7 @@ class ApplicationApi
             );
         }
 
-        $resourcePath = '/applications/{id}';
+        $resourcePath = '/configuration/applications/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1027,7 +1027,7 @@ class ApplicationApi
     protected function postApplicationCollectionRequest($body = null)
     {
 
-        $resourcePath = '/applications';
+        $resourcePath = '/configuration/applications';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1298,7 +1298,7 @@ class ApplicationApi
             );
         }
 
-        $resourcePath = '/applications/{id}';
+        $resourcePath = '/configuration/applications/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

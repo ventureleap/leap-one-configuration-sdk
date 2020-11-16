@@ -4,11 +4,11 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteApplicationItem**](ApplicationApi.md#deleteapplicationitem) | **DELETE** /applications/{id} | Removes the Application resource.
-[**getApplicationCollection**](ApplicationApi.md#getapplicationcollection) | **GET** /applications | Retrieves the collection of Application resources.
-[**getApplicationItem**](ApplicationApi.md#getapplicationitem) | **GET** /applications/{id} | Retrieves a Application resource.
-[**postApplicationCollection**](ApplicationApi.md#postapplicationcollection) | **POST** /applications | Creates a Application resource.
-[**putApplicationItem**](ApplicationApi.md#putapplicationitem) | **PUT** /applications/{id} | Replaces the Application resource.
+[**deleteApplicationItem**](ApplicationApi.md#deleteapplicationitem) | **DELETE** /configuration/applications/{id} | Removes the Application resource.
+[**getApplicationCollection**](ApplicationApi.md#getapplicationcollection) | **GET** /configuration/applications | Retrieves the collection of Application resources.
+[**getApplicationItem**](ApplicationApi.md#getapplicationitem) | **GET** /configuration/applications/{id} | Retrieves a Application resource.
+[**postApplicationCollection**](ApplicationApi.md#postapplicationcollection) | **POST** /configuration/applications | Creates a Application resource.
+[**putApplicationItem**](ApplicationApi.md#putapplicationitem) | **PUT** /configuration/applications/{id} | Replaces the Application resource.
 
 # **deleteApplicationItem**
 > deleteApplicationItem($id)

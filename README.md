@@ -179,17 +179,17 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApplicationApi* | [**deleteApplicationItem**](docs/Api/ApplicationApi.md#deleteapplicationitem) | **DELETE** /applications/{id} | Removes the Application resource.
-*ApplicationApi* | [**getApplicationCollection**](docs/Api/ApplicationApi.md#getapplicationcollection) | **GET** /applications | Retrieves the collection of Application resources.
-*ApplicationApi* | [**getApplicationItem**](docs/Api/ApplicationApi.md#getapplicationitem) | **GET** /applications/{id} | Retrieves a Application resource.
-*ApplicationApi* | [**postApplicationCollection**](docs/Api/ApplicationApi.md#postapplicationcollection) | **POST** /applications | Creates a Application resource.
-*ApplicationApi* | [**putApplicationItem**](docs/Api/ApplicationApi.md#putapplicationitem) | **PUT** /applications/{id} | Replaces the Application resource.
-*ConfigurationEntryApi* | [**deleteConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /configuration_entries/{id} | Removes the ConfigurationEntry resource.
-*ConfigurationEntryApi* | [**getConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#getconfigurationentrycollection) | **GET** /configuration_entries | Retrieves the collection of ConfigurationEntry resources.
-*ConfigurationEntryApi* | [**getConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /configuration_entries/{id} | Retrieves a ConfigurationEntry resource.
-*ConfigurationEntryApi* | [**postConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /configuration_entries | Creates a ConfigurationEntry resource.
-*ConfigurationEntryApi* | [**putConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration_entries/{id} | Replaces the ConfigurationEntry resource.
-*TokenApi* | [**postCredentialsItem**](docs/Api/TokenApi.md#postcredentialsitem) | **POST** /get-token | Get JWT token to login.
+*ApplicationApi* | [**deleteApplicationItem**](docs/Api/ApplicationApi.md#deleteapplicationitem) | **DELETE** /configuration/applications/{id} | Removes the Application resource.
+*ApplicationApi* | [**getApplicationCollection**](docs/Api/ApplicationApi.md#getapplicationcollection) | **GET** /configuration/applications | Retrieves the collection of Application resources.
+*ApplicationApi* | [**getApplicationItem**](docs/Api/ApplicationApi.md#getapplicationitem) | **GET** /configuration/applications/{id} | Retrieves a Application resource.
+*ApplicationApi* | [**postApplicationCollection**](docs/Api/ApplicationApi.md#postapplicationcollection) | **POST** /configuration/applications | Creates a Application resource.
+*ApplicationApi* | [**putApplicationItem**](docs/Api/ApplicationApi.md#putapplicationitem) | **PUT** /configuration/applications/{id} | Replaces the Application resource.
+*ConfigurationEntryApi* | [**deleteConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /configuration/configuration_entries/{id} | Removes the ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**getConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#getconfigurationentrycollection) | **GET** /configuration/configuration_entries | Retrieves the collection of ConfigurationEntry resources.
+*ConfigurationEntryApi* | [**getConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /configuration/configuration_entries/{id} | Retrieves a ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**postConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /configuration/configuration_entries | Creates a ConfigurationEntry resource.
+*ConfigurationEntryApi* | [**putConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration/configuration_entries/{id} | Replaces the ConfigurationEntry resource.
+*TokenApi* | [**postCredentialsItem**](docs/Api/TokenApi.md#postcredentialsitem) | **POST** /configuration/get-token | Get JWT token to login.
 
 ## Documentation For Models
 

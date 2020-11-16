@@ -4,7 +4,7 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postCredentialsItem**](TokenApi.md#postcredentialsitem) | **POST** /get-token | Get JWT token to login.
+[**postCredentialsItem**](TokenApi.md#postcredentialsitem) | **POST** /configuration/get-token | Get JWT token to login.
 
 # **postCredentialsItem**
 > \VentureLeap\ConfigurationService\Model\Token postCredentialsItem($body)
