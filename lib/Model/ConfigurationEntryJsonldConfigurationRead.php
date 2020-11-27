@@ -63,8 +63,7 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
 'updated_at' => '\DateTime',
 'key' => 'string',
 'sub_key' => 'string',
-'value' => 'string',
-'application_id' => 'string'    ];
+'value' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -79,8 +78,7 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
 'updated_at' => 'date-time',
 'key' => null,
 'sub_key' => null,
-'value' => null,
-'application_id' => null    ];
+'value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -116,8 +114,7 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
 'updated_at' => 'updatedAt',
 'key' => 'key',
 'sub_key' => 'subKey',
-'value' => 'value',
-'application_id' => 'applicationId'    ];
+'value' => 'value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -132,8 +129,7 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
 'updated_at' => 'setUpdatedAt',
 'key' => 'setKey',
 'sub_key' => 'setSubKey',
-'value' => 'setValue',
-'application_id' => 'setApplicationId'    ];
+'value' => 'setValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -148,8 +144,7 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
 'updated_at' => 'getUpdatedAt',
 'key' => 'getKey',
 'sub_key' => 'getSubKey',
-'value' => 'getValue',
-'application_id' => 'getApplicationId'    ];
+'value' => 'getValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -217,7 +212,6 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['sub_key'] = isset($data['sub_key']) ? $data['sub_key'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
     }
 
     /**
@@ -229,12 +223,6 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
     {
         $invalidProperties = [];
 
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -438,30 +426,6 @@ class ConfigurationEntryJsonldConfigurationRead implements ModelInterface, Array
     public function setValue($value)
     {
         $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets application_id
-     *
-     * @return string
-     */
-    public function getApplicationId()
-    {
-        return $this->container['application_id'];
-    }
-
-    /**
-     * Sets application_id
-     *
-     * @param string $application_id application_id
-     *
-     * @return $this
-     */
-    public function setApplicationId($application_id)
-    {
-        $this->container['application_id'] = $application_id;
 
         return $this;
     }

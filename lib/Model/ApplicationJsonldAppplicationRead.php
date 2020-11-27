@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfigurationEntryJsonldConfigurationWrite
+ * ApplicationJsonldAppplicationRead
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \VentureLeap\ConfigurationService\ObjectSerializer;
 
 /**
- * ConfigurationEntryJsonldConfigurationWrite Class Doc Comment
+ * ApplicationJsonldAppplicationRead Class Doc Comment
  *
  * @category Class
  * @package  VentureLeap\ConfigurationService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, ArrayAccess
+class ApplicationJsonldAppplicationRead implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfigurationEntry:jsonld-configuration:write';
+    protected static $swaggerModelName = 'Application:jsonld-appplication:read';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     protected static $swaggerTypes = [
         'context' => 'string',
 'id' => 'string',
-'type' => 'string',
-'key' => 'string',
-'sub_key' => 'string',
-'value' => 'string'    ];
+'type' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,10 +68,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     protected static $swaggerFormats = [
         'context' => null,
 'id' => null,
-'type' => null,
-'key' => null,
-'sub_key' => null,
-'value' => null    ];
+'type' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -105,10 +99,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     protected static $attributeMap = [
         'context' => '@context',
 'id' => '@id',
-'type' => '@type',
-'key' => 'key',
-'sub_key' => 'subKey',
-'value' => 'value'    ];
+'type' => '@type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -118,10 +109,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     protected static $setters = [
         'context' => 'setContext',
 'id' => 'setId',
-'type' => 'setType',
-'key' => 'setKey',
-'sub_key' => 'setSubKey',
-'value' => 'setValue'    ];
+'type' => 'setType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -131,10 +119,7 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     protected static $getters = [
         'context' => 'getContext',
 'id' => 'getId',
-'type' => 'getType',
-'key' => 'getKey',
-'sub_key' => 'getSubKey',
-'value' => 'getValue'    ];
+'type' => 'getType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -197,9 +182,6 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['sub_key'] = isset($data['sub_key']) ? $data['sub_key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -294,78 +276,6 @@ class ConfigurationEntryJsonldConfigurationWrite implements ModelInterface, Arra
     public function setType($type)
     {
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets key
-     *
-     * @return string
-     */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-     * Sets key
-     *
-     * @param string $key key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
-
-        return $this;
-    }
-
-    /**
-     * Gets sub_key
-     *
-     * @return string
-     */
-    public function getSubKey()
-    {
-        return $this->container['sub_key'];
-    }
-
-    /**
-     * Sets sub_key
-     *
-     * @param string $sub_key sub_key
-     *
-     * @return $this
-     */
-    public function setSubKey($sub_key)
-    {
-        $this->container['sub_key'] = $sub_key;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return string
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param string $value value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
 
         return $this;
     }

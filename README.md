@@ -56,13 +56,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -78,13 +75,10 @@ try {
     echo 'Exception when calling ApplicationApi->deleteApplicationItem: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -101,13 +95,10 @@ try {
     echo 'Exception when calling ApplicationApi->getApplicationCollection: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -124,13 +115,10 @@ try {
     echo 'Exception when calling ApplicationApi->getApplicationItem: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -138,7 +126,7 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite | The new Application resource
+$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite | The new Application resource
 
 try {
     $result = $apiInstance->postApplicationCollection($body);
@@ -147,13 +135,10 @@ try {
     echo 'Exception when calling ApplicationApi->postApplicationCollection: ', $e->getMessage(), PHP_EOL;
 }
 
-// Configure API key authorization: applicationId
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');// Configure HTTP basic authorization: basicAuth
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()
-    ->setUsername('YOUR_USERNAME')
-    ->setPassword('YOUR_PASSWORD');
+// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -162,7 +147,7 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite | The updated Application resource
+$body = new \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite(); // \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite | The updated Application resource
 
 try {
     $result = $apiInstance->putApplicationItem($id, $body);
@@ -190,11 +175,12 @@ Class | Method | HTTP request | Description
 *ConfigurationEntryApi* | [**postConfigurationEntryCollection**](docs/Api/ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /configuration/configuration_entries | Creates a ConfigurationEntry resource.
 *ConfigurationEntryApi* | [**putConfigurationEntryItem**](docs/Api/ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration/configuration_entries/{id} | Replaces the ConfigurationEntry resource.
 *TokenApi* | [**postCredentialsItem**](docs/Api/TokenApi.md#postcredentialsitem) | **POST** /configuration/get-token | Get JWT token to login.
+*TokenApi* | [**postCredentialsItemForPublicToken**](docs/Api/TokenApi.md#postcredentialsitemforpublictoken) | **POST** /configuration/get-public-token | Get a public JWT token
 
 ## Documentation For Models
 
- - [ApplicationJsonldRead](docs/Model/ApplicationJsonldRead.md)
- - [ApplicationJsonldWrite](docs/Model/ApplicationJsonldWrite.md)
+ - [ApplicationJsonldAppplicationRead](docs/Model/ApplicationJsonldAppplicationRead.md)
+ - [ApplicationJsonldAppplicationWrite](docs/Model/ApplicationJsonldAppplicationWrite.md)
  - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [Credentials](docs/Model/Credentials.md)
@@ -208,15 +194,11 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## applicationId
+## apiKey
 
 - **Type**: API key
-- **API key parameter name**: ApplicationId
+- **API key parameter name**: Authorization
 - **Location**: HTTP header
-
-## basicAuth
-
-- **Type**: HTTP basic authentication
 
 
 ## Author

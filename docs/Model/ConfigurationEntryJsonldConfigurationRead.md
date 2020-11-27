@@ -8,10 +8,9 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**key** | **string** |  | 
+**key** | **string** |  | [optional] 
 **sub_key** | **string** |  | [optional] 
-**value** | **string** |  | 
-**application_id** | **string** |  | [optional] 
+**value** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -291,13 +291,9 @@ class ApplicationApi
         }
 
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
         if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+            $headers['Authorization'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -552,13 +548,9 @@ class ApplicationApi
         }
 
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
         if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+            $headers['Authorization'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -590,7 +582,7 @@ class ApplicationApi
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead
+     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead
      */
     public function getApplicationItem($id)
     {
@@ -607,11 +599,11 @@ class ApplicationApi
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getApplicationItemWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->getApplicationItemRequest($id);
 
         try {
@@ -663,7 +655,7 @@ class ApplicationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead',
+                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -705,7 +697,7 @@ class ApplicationApi
      */
     public function getApplicationItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->getApplicationItemRequest($id);
 
         return $this->client
@@ -823,13 +815,9 @@ class ApplicationApi
         }
 
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
         if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+            $headers['Authorization'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -857,11 +845,11 @@ class ApplicationApi
      *
      * Creates a Application resource.
      *
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The new Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The new Application resource (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead
+     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead
      */
     public function postApplicationCollection($body = null)
     {
@@ -874,15 +862,15 @@ class ApplicationApi
      *
      * Creates a Application resource.
      *
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The new Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The new Application resource (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postApplicationCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->postApplicationCollectionRequest($body);
 
         try {
@@ -934,7 +922,7 @@ class ApplicationApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead',
+                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -949,7 +937,7 @@ class ApplicationApi
      *
      * Creates a Application resource.
      *
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The new Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The new Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -969,14 +957,14 @@ class ApplicationApi
      *
      * Creates a Application resource.
      *
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The new Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The new Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postApplicationCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->postApplicationCollectionRequest($body);
 
         return $this->client
@@ -1019,7 +1007,7 @@ class ApplicationApi
     /**
      * Create request for operation 'postApplicationCollection'
      *
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The new Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The new Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1083,13 +1071,9 @@ class ApplicationApi
         }
 
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
         if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+            $headers['Authorization'] = $apiKey;
         }
 
         $defaultHeaders = [];
@@ -1118,11 +1102,11 @@ class ApplicationApi
      * Replaces the Application resource.
      *
      * @param  string $id id (required)
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The updated Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The updated Application resource (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead
+     * @return \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead
      */
     public function putApplicationItem($id, $body = null)
     {
@@ -1136,15 +1120,15 @@ class ApplicationApi
      * Replaces the Application resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The updated Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The updated Application resource (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function putApplicationItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->putApplicationItemRequest($id, $body);
 
         try {
@@ -1196,7 +1180,7 @@ class ApplicationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead',
+                        '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1212,7 +1196,7 @@ class ApplicationApi
      * Replaces the Application resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The updated Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The updated Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1233,14 +1217,14 @@ class ApplicationApi
      * Replaces the Application resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The updated Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The updated Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function putApplicationItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldRead';
+        $returnType = '\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead';
         $request = $this->putApplicationItemRequest($id, $body);
 
         return $this->client
@@ -1284,7 +1268,7 @@ class ApplicationApi
      * Create request for operation 'putApplicationItem'
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldWrite $body The updated Application resource (optional)
+     * @param  \VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationWrite $body The updated Application resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1362,13 +1346,9 @@ class ApplicationApi
         }
 
         // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
         if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-        // this endpoint requires HTTP basic authentication
-        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+            $headers['Authorization'] = $apiKey;
         }
 
         $defaultHeaders = [];
