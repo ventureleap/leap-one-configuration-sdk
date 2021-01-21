@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **uuid** | **string** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**key** | **string** |  | [optional] 
+**key** | **string** |  | 
 **sub_key** | **string** |  | [optional] 
 **value** | **string** |  | [optional] 
 **application_id** | **string** |  | [optional] 

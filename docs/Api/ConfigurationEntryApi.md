@@ -62,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfigurationEntryCollection**
-> \VentureLeap\ConfigurationService\Model\InlineResponse2001 getConfigurationEntryCollection($key, $value, $application_id, $page)
+> \VentureLeap\ConfigurationService\Model\InlineResponse2001 getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page)
 
 Retrieves the collection of ConfigurationEntry resources.
 
@@ -82,12 +82,13 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ConfigurationEntryApi(
     $config
 );
 $key = "key_example"; // string | 
+$sub_key = "sub_key_example"; // string | 
 $value = "value_example"; // string | 
 $application_id = "application_id_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getConfigurationEntryCollection($key, $value, $application_id, $page);
+    $result = $apiInstance->getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->getConfigurationEntryCollection: ', $e->getMessage(), PHP_EOL;
@@ -100,6 +101,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**|  | [optional]
+ **sub_key** | **string**|  | [optional]
  **value** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
