@@ -62,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfigurationEntryCollection**
-> \VentureLeap\ConfigurationService\Model\InlineResponse2001 getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page)
+> \VentureLeap\ConfigurationService\Model\InlineResponse2001 getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page, $pagination)
 
 Retrieves the collection of ConfigurationEntry resources.
 
@@ -86,9 +86,10 @@ $sub_key = "sub_key_example"; // string |
 $value = "value_example"; // string | 
 $application_id = "application_id_example"; // string | 
 $page = 1; // int | The collection page number
+$pagination = true; // bool | Enable or disable pagination
 
 try {
-    $result = $apiInstance->getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page);
+    $result = $apiInstance->getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page, $pagination);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->getConfigurationEntryCollection: ', $e->getMessage(), PHP_EOL;
@@ -105,6 +106,7 @@ Name | Type | Description  | Notes
  **value** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
+ **pagination** | **bool**| Enable or disable pagination | [optional]
 
 ### Return type
 

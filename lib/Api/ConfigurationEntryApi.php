@@ -326,14 +326,15 @@ class ConfigurationEntryApi
      * @param  string $value value (optional)
      * @param  string $application_id application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  bool $pagination Enable or disable pagination (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \VentureLeap\ConfigurationService\Model\InlineResponse2001
      */
-    public function getConfigurationEntryCollection($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1')
+    public function getConfigurationEntryCollection($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1', $pagination = null)
     {
-        list($response) = $this->getConfigurationEntryCollectionWithHttpInfo($key, $sub_key, $value, $application_id, $page);
+        list($response) = $this->getConfigurationEntryCollectionWithHttpInfo($key, $sub_key, $value, $application_id, $page, $pagination);
         return $response;
     }
 
@@ -347,15 +348,16 @@ class ConfigurationEntryApi
      * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  bool $pagination Enable or disable pagination (optional)
      *
      * @throws \VentureLeap\ConfigurationService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \VentureLeap\ConfigurationService\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getConfigurationEntryCollectionWithHttpInfo($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionWithHttpInfo($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1', $pagination = null)
     {
         $returnType = '\VentureLeap\ConfigurationService\Model\InlineResponse2001';
-        $request = $this->getConfigurationEntryCollectionRequest($key, $sub_key, $value, $application_id, $page);
+        $request = $this->getConfigurationEntryCollectionRequest($key, $sub_key, $value, $application_id, $page, $pagination);
 
         try {
             $options = $this->createHttpClientOption();
@@ -426,13 +428,14 @@ class ConfigurationEntryApi
      * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  bool $pagination Enable or disable pagination (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getConfigurationEntryCollectionAsync($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionAsync($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1', $pagination = null)
     {
-        return $this->getConfigurationEntryCollectionAsyncWithHttpInfo($key, $sub_key, $value, $application_id, $page)
+        return $this->getConfigurationEntryCollectionAsyncWithHttpInfo($key, $sub_key, $value, $application_id, $page, $pagination)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -450,14 +453,15 @@ class ConfigurationEntryApi
      * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  bool $pagination Enable or disable pagination (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getConfigurationEntryCollectionAsyncWithHttpInfo($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1')
+    public function getConfigurationEntryCollectionAsyncWithHttpInfo($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1', $pagination = null)
     {
         $returnType = '\VentureLeap\ConfigurationService\Model\InlineResponse2001';
-        $request = $this->getConfigurationEntryCollectionRequest($key, $sub_key, $value, $application_id, $page);
+        $request = $this->getConfigurationEntryCollectionRequest($key, $sub_key, $value, $application_id, $page, $pagination);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -504,11 +508,12 @@ class ConfigurationEntryApi
      * @param  string $value (optional)
      * @param  string $application_id (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  bool $pagination Enable or disable pagination (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getConfigurationEntryCollectionRequest($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1')
+    protected function getConfigurationEntryCollectionRequest($key = null, $sub_key = null, $value = null, $application_id = null, $page = '1', $pagination = null)
     {
 
         $resourcePath = '/configuration/configuration_entries';
@@ -537,6 +542,10 @@ class ConfigurationEntryApi
         // query params
         if ($page !== null) {
             $queryParams['page'] = ObjectSerializer::toQueryValue($page, null);
+        }
+        // query params
+        if ($pagination !== null) {
+            $queryParams['pagination'] = ObjectSerializer::toQueryValue($pagination, null);
         }
 
 
