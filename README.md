@@ -86,26 +86,6 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$page = 1; // int | The collection page number
-
-try {
-    $result = $apiInstance->getApplicationCollection($page);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApplicationApi->getApplicationCollection: ', $e->getMessage(), PHP_EOL;
-}
-
-// Configure API key authorization: apiKey
-$config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = VentureLeap\ConfigurationService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-$apiInstance = new VentureLeap\ConfigurationService\Api\ApplicationApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
 $id = "id_example"; // string | 
 
 try {
@@ -165,7 +145,6 @@ All URIs are relative to */*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ApplicationApi* | [**deleteApplicationItem**](docs/Api/ApplicationApi.md#deleteapplicationitem) | **DELETE** /configuration/applications/{id} | Removes the Application resource.
-*ApplicationApi* | [**getApplicationCollection**](docs/Api/ApplicationApi.md#getapplicationcollection) | **GET** /configuration/applications | Retrieves the collection of Application resources.
 *ApplicationApi* | [**getApplicationItem**](docs/Api/ApplicationApi.md#getapplicationitem) | **GET** /configuration/applications/{id} | Retrieves a Application resource.
 *ApplicationApi* | [**postApplicationCollection**](docs/Api/ApplicationApi.md#postapplicationcollection) | **POST** /configuration/applications | Creates a Application resource.
 *ApplicationApi* | [**putApplicationItem**](docs/Api/ApplicationApi.md#putapplicationitem) | **PUT** /configuration/applications/{id} | Replaces the Application resource.
@@ -185,7 +164,6 @@ Class | Method | HTTP request | Description
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [Credentials](docs/Model/Credentials.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
- - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse200Hydrasearch](docs/Model/InlineResponse200Hydrasearch.md)
  - [InlineResponse200HydrasearchHydramapping](docs/Model/InlineResponse200HydrasearchHydramapping.md)
  - [InlineResponse200Hydraview](docs/Model/InlineResponse200Hydraview.md)

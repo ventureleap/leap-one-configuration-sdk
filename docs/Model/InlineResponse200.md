@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hydramember** | [**\VentureLeap\ConfigurationService\Model\ApplicationJsonldAppplicationRead[]**](ApplicationJsonldAppplicationRead.md) |  | 
+**hydramember** | [**\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead[]**](ConfigurationEntryJsonldConfigurationRead.md) |  | 
 **hydratotal_items** | **int** |  | [optional] 
 **hydraview** | [**\VentureLeap\ConfigurationService\Model\InlineResponse200Hydraview**](InlineResponse200Hydraview.md) |  | [optional] 
 **hydrasearch** | [**\VentureLeap\ConfigurationService\Model\InlineResponse200Hydrasearch**](InlineResponse200Hydrasearch.md) |  | [optional] 

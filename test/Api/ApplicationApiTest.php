@@ -81,16 +81,6 @@ class ApplicationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getApplicationCollection
-     *
-     * Retrieves the collection of Application resources..
-     *
-     */
-    public function testGetApplicationCollection()
-    {
-    }
-
-    /**
      * Test case for getApplicationItem
      *
      * Retrieves a Application resource..
