@@ -1,12 +1,8 @@
-# ApplicationJsonldAppplicationWrite
+# OneOfConfigurationEntryJsonldConfigurationReadContext
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**context** | [**OneOfApplicationJsonldAppplicationWriteContext**](OneOfApplicationJsonldAppplicationWriteContext.md) |  | [optional] 
-**id** | **string** |  | [optional] 
-**type** | **string** |  | [optional] 
-**name** | **string** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

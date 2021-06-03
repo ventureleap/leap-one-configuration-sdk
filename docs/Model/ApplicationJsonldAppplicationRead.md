@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**context** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
+**context** | [**OneOfApplicationJsonldAppplicationReadContext**](OneOfApplicationJsonldAppplicationReadContext.md) |  | [optional] 
 **uuid** | **string** |  | [optional] 
 **name** | **string** |  | 
 **app_secret** | **string** |  | [optional] 

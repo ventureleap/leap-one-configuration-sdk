@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**context** | **string** |  | [optional] 
+**context** | [**OneOfConfigurationEntryJsonldConfigurationWriteContext**](OneOfConfigurationEntryJsonldConfigurationWriteContext.md) |  | [optional] 
 **id** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **key** | **string** |  | 

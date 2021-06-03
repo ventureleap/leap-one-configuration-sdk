@@ -1,6 +1,6 @@
 <?php
 /**
- * ApplicationJsonldAppplicationWrite
+ * OneOfConfigurationEntryJsonldConfigurationReadContext
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \VentureLeap\ConfigurationService\ObjectSerializer;
 
 /**
- * ApplicationJsonldAppplicationWrite Class Doc Comment
+ * OneOfConfigurationEntryJsonldConfigurationReadContext Class Doc Comment
  *
  * @category Class
  * @package  VentureLeap\ConfigurationService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
+class OneOfConfigurationEntryJsonldConfigurationReadContext implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Application.jsonld-appplication.write';
+    protected static $swaggerModelName = 'OneOfConfigurationEntry.jsonld-configuration.readContext';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'context' => 'OneOfApplicationJsonldAppplicationWriteContext',
-'id' => 'string',
-'type' => 'string',
-'name' => 'string'    ];
+            ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +64,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'context' => null,
-'id' => null,
-'type' => null,
-'name' => null    ];
+            ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +93,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'context' => '@context',
-'id' => '@id',
-'type' => '@type',
-'name' => 'name'    ];
+            ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +101,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'context' => 'setContext',
-'id' => 'setId',
-'type' => 'setType',
-'name' => 'setName'    ];
+            ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +109,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'context' => 'getContext',
-'id' => 'getId',
-'type' => 'getType',
-'name' => 'getName'    ];
+            ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +169,6 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -199,9 +180,6 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -216,102 +194,6 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets context
-     *
-     * @return OneOfApplicationJsonldAppplicationWriteContext
-     */
-    public function getContext()
-    {
-        return $this->container['context'];
-    }
-
-    /**
-     * Sets context
-     *
-     * @param OneOfApplicationJsonldAppplicationWriteContext $context context
-     *
-     * @return $this
-     */
-    public function setContext($context)
-    {
-        $this->container['context'] = $context;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

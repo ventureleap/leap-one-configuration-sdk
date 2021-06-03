@@ -1,6 +1,6 @@
 <?php
 /**
- * ApplicationJsonldAppplicationWrite
+ * InlineResponse2001
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \VentureLeap\ConfigurationService\ObjectSerializer;
 
 /**
- * ApplicationJsonldAppplicationWrite Class Doc Comment
+ * InlineResponse2001 Class Doc Comment
  *
  * @category Class
  * @package  VentureLeap\ConfigurationService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
+class InlineResponse2001 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Application.jsonld-appplication.write';
+    protected static $swaggerModelName = 'inline_response_200_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'context' => 'OneOfApplicationJsonldAppplicationWriteContext',
-'id' => 'string',
-'type' => 'string',
-'name' => 'string'    ];
+        'hydramember' => '\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead[]',
+'hydratotal_items' => 'int',
+'hydraview' => '\VentureLeap\ConfigurationService\Model\InlineResponse200Hydraview',
+'hydrasearch' => '\VentureLeap\ConfigurationService\Model\InlineResponse200Hydrasearch'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +67,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'context' => null,
-'id' => null,
-'type' => null,
-'name' => null    ];
+        'hydramember' => null,
+'hydratotal_items' => null,
+'hydraview' => null,
+'hydrasearch' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +99,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'context' => '@context',
-'id' => '@id',
-'type' => '@type',
-'name' => 'name'    ];
+        'hydramember' => 'hydra:member',
+'hydratotal_items' => 'hydra:totalItems',
+'hydraview' => 'hydra:view',
+'hydrasearch' => 'hydra:search'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +110,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'context' => 'setContext',
-'id' => 'setId',
-'type' => 'setType',
-'name' => 'setName'    ];
+        'hydramember' => 'setHydramember',
+'hydratotal_items' => 'setHydratotalItems',
+'hydraview' => 'setHydraview',
+'hydrasearch' => 'setHydrasearch'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +121,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'context' => 'getContext',
-'id' => 'getId',
-'type' => 'getType',
-'name' => 'getName'    ];
+        'hydramember' => 'getHydramember',
+'hydratotal_items' => 'getHydratotalItems',
+'hydraview' => 'getHydraview',
+'hydrasearch' => 'getHydrasearch'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +184,10 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['hydramember'] = isset($data['hydramember']) ? $data['hydramember'] : null;
+        $this->container['hydratotal_items'] = isset($data['hydratotal_items']) ? $data['hydratotal_items'] : null;
+        $this->container['hydraview'] = isset($data['hydraview']) ? $data['hydraview'] : null;
+        $this->container['hydrasearch'] = isset($data['hydrasearch']) ? $data['hydrasearch'] : null;
     }
 
     /**
@@ -199,8 +199,8 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if ($this->container['hydramember'] === null) {
+            $invalidProperties[] = "'hydramember' can't be null";
         }
         return $invalidProperties;
     }
@@ -218,97 +218,97 @@ class ApplicationJsonldAppplicationWrite implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets context
+     * Gets hydramember
      *
-     * @return OneOfApplicationJsonldAppplicationWriteContext
+     * @return \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead[]
      */
-    public function getContext()
+    public function getHydramember()
     {
-        return $this->container['context'];
+        return $this->container['hydramember'];
     }
 
     /**
-     * Sets context
+     * Sets hydramember
      *
-     * @param OneOfApplicationJsonldAppplicationWriteContext $context context
+     * @param \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead[] $hydramember hydramember
      *
      * @return $this
      */
-    public function setContext($context)
+    public function setHydramember($hydramember)
     {
-        $this->container['context'] = $context;
+        $this->container['hydramember'] = $hydramember;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets hydratotal_items
      *
-     * @return string
+     * @return int
      */
-    public function getId()
+    public function getHydratotalItems()
     {
-        return $this->container['id'];
+        return $this->container['hydratotal_items'];
     }
 
     /**
-     * Sets id
+     * Sets hydratotal_items
      *
-     * @param string $id id
+     * @param int $hydratotal_items hydratotal_items
      *
      * @return $this
      */
-    public function setId($id)
+    public function setHydratotalItems($hydratotal_items)
     {
-        $this->container['id'] = $id;
+        $this->container['hydratotal_items'] = $hydratotal_items;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets hydraview
      *
-     * @return string
+     * @return \VentureLeap\ConfigurationService\Model\InlineResponse200Hydraview
      */
-    public function getType()
+    public function getHydraview()
     {
-        return $this->container['type'];
+        return $this->container['hydraview'];
     }
 
     /**
-     * Sets type
+     * Sets hydraview
      *
-     * @param string $type type
+     * @param \VentureLeap\ConfigurationService\Model\InlineResponse200Hydraview $hydraview hydraview
      *
      * @return $this
      */
-    public function setType($type)
+    public function setHydraview($hydraview)
     {
-        $this->container['type'] = $type;
+        $this->container['hydraview'] = $hydraview;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets hydrasearch
      *
-     * @return string
+     * @return \VentureLeap\ConfigurationService\Model\InlineResponse200Hydrasearch
      */
-    public function getName()
+    public function getHydrasearch()
     {
-        return $this->container['name'];
+        return $this->container['hydrasearch'];
     }
 
     /**
-     * Sets name
+     * Sets hydrasearch
      *
-     * @param string $name name
+     * @param \VentureLeap\ConfigurationService\Model\InlineResponse200Hydrasearch $hydrasearch hydrasearch
      *
      * @return $this
      */
-    public function setName($name)
+    public function setHydrasearch($hydrasearch)
     {
-        $this->container['name'] = $name;
+        $this->container['hydrasearch'] = $hydrasearch;
 
         return $this;
     }

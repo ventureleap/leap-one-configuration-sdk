@@ -4,14 +4,16 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteConfigurationEntryItem**](ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /configuration/configuration_entries/{id} | Removes the ConfigurationEntry resource.
+[**deleteConfigurationEntryItem**](ConfigurationEntryApi.md#deleteconfigurationentryitem) | **DELETE** /configuration/configuration_entries/{uuid} | Removes the ConfigurationEntry resource.
 [**getConfigurationEntryCollection**](ConfigurationEntryApi.md#getconfigurationentrycollection) | **GET** /configuration/configuration_entries | Retrieves the collection of ConfigurationEntry resources.
-[**getConfigurationEntryItem**](ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /configuration/configuration_entries/{id} | Retrieves a ConfigurationEntry resource.
+[**getConfigurationEntryItem**](ConfigurationEntryApi.md#getconfigurationentryitem) | **GET** /configuration/configuration_entries/{uuid} | Retrieves a ConfigurationEntry resource.
 [**postConfigurationEntryCollection**](ConfigurationEntryApi.md#postconfigurationentrycollection) | **POST** /configuration/configuration_entries | Creates a ConfigurationEntry resource.
-[**putConfigurationEntryItem**](ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration/configuration_entries/{id} | Replaces the ConfigurationEntry resource.
+[**putConfigurationEntryItem**](ConfigurationEntryApi.md#putconfigurationentryitem) | **PUT** /configuration/configuration_entries/{uuid} | Replaces the ConfigurationEntry resource.
 
 # **deleteConfigurationEntryItem**
-> deleteConfigurationEntryItem($id)
+> deleteConfigurationEntryItem($uuid)
+
+Removes the ConfigurationEntry resource.
 
 Removes the ConfigurationEntry resource.
 
@@ -30,10 +32,10 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ConfigurationEntryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | 
+$uuid = "uuid_example"; // string | Resource identifier
 
 try {
-    $apiInstance->deleteConfigurationEntryItem($id);
+    $apiInstance->deleteConfigurationEntryItem($uuid);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->deleteConfigurationEntryItem: ', $e->getMessage(), PHP_EOL;
 }
@@ -44,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
+ **uuid** | **string**| Resource identifier |
 
 ### Return type
 
@@ -62,7 +64,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfigurationEntryCollection**
-> \VentureLeap\ConfigurationService\Model\InlineResponse200 getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page, $pagination)
+> \VentureLeap\ConfigurationService\Model\InlineResponse2001 getConfigurationEntryCollection($page, $pagination, $key, $sub_key, $value, $application_id)
+
+Retrieves the collection of ConfigurationEntry resources.
 
 Retrieves the collection of ConfigurationEntry resources.
 
@@ -81,15 +85,15 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ConfigurationEntryApi(
     new GuzzleHttp\Client(),
     $config
 );
+$page = 1; // int | The collection page number
+$pagination = true; // bool | Enable or disable pagination
 $key = "key_example"; // string | 
 $sub_key = "sub_key_example"; // string | 
 $value = "value_example"; // string | 
 $application_id = "application_id_example"; // string | 
-$page = 1; // int | The collection page number
-$pagination = true; // bool | Enable or disable pagination
 
 try {
-    $result = $apiInstance->getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page, $pagination);
+    $result = $apiInstance->getConfigurationEntryCollection($page, $pagination, $key, $sub_key, $value, $application_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->getConfigurationEntryCollection: ', $e->getMessage(), PHP_EOL;
@@ -101,16 +105,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **int**| The collection page number | [optional] [default to 1]
+ **pagination** | **bool**| Enable or disable pagination | [optional]
  **key** | **string**|  | [optional]
  **sub_key** | **string**|  | [optional]
  **value** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
- **page** | **int**| The collection page number | [optional] [default to 1]
- **pagination** | **bool**| Enable or disable pagination | [optional]
 
 ### Return type
 
-[**\VentureLeap\ConfigurationService\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\VentureLeap\ConfigurationService\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -124,7 +128,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfigurationEntryItem**
-> \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead getConfigurationEntryItem($id)
+> \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead getConfigurationEntryItem($uuid)
+
+Retrieves a ConfigurationEntry resource.
 
 Retrieves a ConfigurationEntry resource.
 
@@ -143,10 +149,10 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ConfigurationEntryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | 
+$uuid = "uuid_example"; // string | Resource identifier
 
 try {
-    $result = $apiInstance->getConfigurationEntryItem($id);
+    $result = $apiInstance->getConfigurationEntryItem($uuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->getConfigurationEntryItem: ', $e->getMessage(), PHP_EOL;
@@ -158,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
+ **uuid** | **string**| Resource identifier |
 
 ### Return type
 
@@ -177,6 +183,8 @@ Name | Type | Description  | Notes
 
 # **postConfigurationEntryCollection**
 > \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead postConfigurationEntryCollection($body)
+
+Creates a ConfigurationEntry resource.
 
 Creates a ConfigurationEntry resource.
 
@@ -210,7 +218,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite**](../Model/ConfigurationEntryJsonldConfigurationWrite.md)| The new ConfigurationEntry resource | [optional]
+ **body** | [**\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite**](../Model/ConfigurationEntryJsonldConfigurationWrite.md)| The new ConfigurationEntry resource |
 
 ### Return type
 
@@ -228,7 +236,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putConfigurationEntryItem**
-> \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead putConfigurationEntryItem($id, $body)
+> \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationRead putConfigurationEntryItem($body, $uuid)
+
+Replaces the ConfigurationEntry resource.
 
 Replaces the ConfigurationEntry resource.
 
@@ -247,11 +257,11 @@ $apiInstance = new VentureLeap\ConfigurationService\Api\ConfigurationEntryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | 
 $body = new \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite(); // \VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite | The updated ConfigurationEntry resource
+$uuid = "uuid_example"; // string | Resource identifier
 
 try {
-    $result = $apiInstance->putConfigurationEntryItem($id, $body);
+    $result = $apiInstance->putConfigurationEntryItem($body, $uuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->putConfigurationEntryItem: ', $e->getMessage(), PHP_EOL;
@@ -263,8 +273,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
- **body** | [**\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite**](../Model/ConfigurationEntryJsonldConfigurationWrite.md)| The updated ConfigurationEntry resource | [optional]
+ **body** | [**\VentureLeap\ConfigurationService\Model\ConfigurationEntryJsonldConfigurationWrite**](../Model/ConfigurationEntryJsonldConfigurationWrite.md)| The updated ConfigurationEntry resource |
+ **uuid** | **string**| Resource identifier |
 
 ### Return type
 

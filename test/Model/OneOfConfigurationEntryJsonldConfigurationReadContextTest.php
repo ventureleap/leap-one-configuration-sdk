@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200HydrasearchHydramappingTest
+ * OneOfConfigurationEntryJsonldConfigurationReadContextTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace VentureLeap\ConfigurationService;
 
 /**
- * InlineResponse200HydrasearchHydramappingTest Class Doc Comment
+ * OneOfConfigurationEntryJsonldConfigurationReadContextTest Class Doc Comment
  *
  * @category    Class
- * @description InlineResponse200HydrasearchHydramapping
+ * @description OneOfConfigurationEntryJsonldConfigurationReadContext
  * @package     VentureLeap\ConfigurationService
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200HydrasearchHydramappingTest extends \PHPUnit_Framework_TestCase
+class OneOfConfigurationEntryJsonldConfigurationReadContextTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,37 +69,9 @@ class InlineResponse200HydrasearchHydramappingTest extends \PHPUnit_Framework_Te
     }
 
     /**
-     * Test "InlineResponse200HydrasearchHydramapping"
+     * Test "OneOfConfigurationEntryJsonldConfigurationReadContext"
      */
-    public function testInlineResponse200HydrasearchHydramapping()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
-     * Test attribute "variable"
-     */
-    public function testPropertyVariable()
-    {
-    }
-
-    /**
-     * Test attribute "property"
-     */
-    public function testPropertyProperty()
-    {
-    }
-
-    /**
-     * Test attribute "required"
-     */
-    public function testPropertyRequired()
+    public function testOneOfConfigurationEntryJsonldConfigurationReadContext()
     {
     }
 }
